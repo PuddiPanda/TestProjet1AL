@@ -5,5 +5,5 @@ public interface Dao<T> {
 	
 	public void create();
 	
-
+	/// l,kjf csjnxwc sj<lk:
 }
