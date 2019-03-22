@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<title>COOPER'Active, bienvevue!</title>
+	<link rel="stylesheet" type="text/css" href="css/styleP3.css" />
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+		crossorigin="anonymous" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/navbar.js"></script>
+
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</h:head>
+
+
+<h:body>
+
+	<!-- HEADER -->
+
+	<b:navBar brand="" fluid="true" brand-img="pics/website/Logo70.png"
+		id="navbar-brand">
+		<div id="navbar">
+			<b:navbarLinks>
+				<b:navLink value="Nous connaitre" href="#jumbotronNousConnaitre"
+					id="navbarLink1"></b:navLink>
+				<b:navLink value="Nos établissements" href="#nosEtablissements"
+					id="navbarLink2"></b:navLink>
+				<b:navLink value="Contact" href="#basDePage" id="navbarLink3"></b:navLink>
+				<b:navLink value="Aide" href="#" id="navbarLink4"></b:navLink>
+				<b:navLink value="S'inscrire" href="#jumbotronNousConnaitre" id="navbarLink5"></b:navLink>
+
+				<b:navLink value="" href="#connect"
+					onclick="$('.formValidationModalClass').modal('show')"
+					iconAwesome="user" icon-size="2x" id="iconConnect">
+					<b:modal styleClass="formValidationModalClass" closable="false"
+						closeOnEscape="true">
+						<b:form id="form">
+							<h4>Déjà adhérent :</h4>
+
+							<b:row>
+								<b:column>
+									<b:inputText placeholder="Identifiant"
+										value="#{mbConnect.login}" class="form-control"
+										id="exampleDropdownFormEmail1" required="false"
+										requiredMessage="Entrez votre identifiant" />
+
+									<b:inputSecret placeholder="Mot de passe"
+										value="#{mbConnect.password}" class="form-control"
+										id="exampleDropdownFormPassword1" required="true"
+										requiredMessage="Entrez votre mot de passel" />
+										<h:message for="exampleDropdownFormPassword1"/>
+
+									<b:button look="link" value="Mot de passe oublié"
+										large-screen="full-width" />
+								</b:column>
+							</b:row>
+
+							<b:row>
+								<b:column>
+									<b:commandButton largeScreen="half" update="@form"
+										dismiss="modal" value="Me connecter" look="info"
+										action="#{mbConnect.connexion()}" />
+									<b:button largeScreen="half" value="Annuler" 
+										dismiss="modal"  href="#navbar-brand"/>
+								</b:column>
+							</b:row>
+
+							<b:fetchBeanInfos />
+							<b:messages />
+						</b:form>
+					</b:modal>
+				</b:navLink>
+			</b:navbarLinks>
+		</div>
+	</b:navBar>
+
+
+	<!-- CAROUSEL -->
+
+	<b:carousel id="carousel">
+		<b:carouselItem>
+			<img src="pics/website/sliderCrayonsTexte.jpg" alt="crayons" />
+			<b:carouselCaption>
+
+			</b:carouselCaption>
+		</b:carouselItem>
+		<b:carouselItem>
+			<img src="pics/website/rushRentreeTexte.jpg" alt="livre" />
+			<b:carouselCaption>
+			</b:carouselCaption>
+		</b:carouselItem>
+		<b:carouselItem>
+			<img src="pics/website/crayonsPlage.jpg" alt="livre" />
+			<b:carouselCaption>
+			</b:carouselCaption>
+		</b:carouselItem>
+	</b:carousel>
+
+
+	<!-- JUMBOTRON -->
+
+	<div class="container-fluid" id="jumbotronNousConnaitre">
+		<div class="row jumbotron">
+			<div class="container-fluid padding">
+				<div class="row welcome text-center">
+					<div class="col-5"></div>
+					<div class="col-2" id="nousConnaitre">
+						<h2 class="display-4">Nous connaître</h2>
+					</div>
+
+					<div class="col-5"></div>
+				</div>
+			</div>
+			<div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2"></div>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+				<br /> <br /> <br />
+				<p class="lead">
+					Lors de chaque rentrée scolaire, l’achat de fournitures est une
+					étape obligatoire pour les parents d’élèves qui souhaitent voir
+					leurs enfants étudier dans de bonnes conditions. Coûteux en
+					énergie, en temps et financièrement, ces achats représentent vite
+					une véritable corvée pour les parents d’élèves. <br /> <br /> La
+					Coopér’Active est un organisme qui a pour vocation de regrouper et
+					d’aider les parents d’élèves en facilitant et en optimisant les
+					achats de fournitures scolaires. <br /> <br /> Pour se faire,
+					elle récupère directement les listes de fournitures demandées
+					auprès des établissements scolaires de son secteur et les propose
+					aux parents d’élèves intéressés.
+				</p><br/>
+			</div>
+			<div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2"></div>
+
+			<div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2"></div>
+			<div class="inscription col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+				
+				<a href="#sInscrire" data-toggle="modal" id="jeMInscris" onclick="$('.formValidationModalClass1').modal('show')" ><b>Je m'inscris!</b></a>		
+						
+					<b:modal styleClass="formValidationModalClass1" closable="false"
+						closeOnEscape="true">
+						<b:form>
+						
+						<br/><br/><h4>Formulaire d'adhésion</h4><br/><br/>
+
+							<b:row>
+								<b:column>
+									<b:inputText placeholder="Nom"
+										value="#{mbAddAdherent.adherent.nom}"  class="form-control"
+										id="exampleDropdownFormEmail2" required="true"
+										requiredMessage="Veuillez saisir un nom" />
+										
+									<b:inputText placeholder="Prénom" 
+										value="#{mbAddAdherent.adherent.prenom}"  class="form-control"
+										id="exampleDropdownFormEmail3" required="true"
+										requiredMessage="Veuillez saisir un prénom"/>
+										
+									<b:inputText placeholder="Numéro et type de voie"
+										value="#{mbAddAdherent.adherent.adresse}"   class="form-control"
+										id="exampleDropdownFormEmail4" required="false"
+										requiredMessage="Veuillez saisir une adresse" />
+										
+									<b:inputText placeholder="ComplementAdresse"
+										value="#{mbAddAdherent.adherent.complementAdresse}"  class="form-control"
+										id="exampleDropdownFormEmail5" required="false"/>
+										
+									<b:inputText placeholder="Code Postal"
+										value="#{mbAddAdherent.cp}"  class="form-control"
+										id="exampleDropdownFormEmail6" required="true"
+										requiredMessage="Veuillez saisir votre code postal"/>
+										
+									<b:inputText placeholder="Ville"
+										value="#{mbAddAdherent.nomVille}"  class="form-control"
+										id="exampleDropdownFormEmail7" required="true"
+										requiredMessage="Veuillez saisir une ville"/>
+										
+									<b:inputText placeholder="Téléphone fixe"
+										value="#{mbAddAdherent.adherent.numeroFixe}"  class="form-control"
+										id="exampleDropdownFormEmail8" required="false"/>
+										
+									<b:inputText placeholder="Portable"
+										value="#{mbAddAdherent.adherent.numeroPort}"   class="form-control"
+										id="exampleDropdownFormEmail9" required="false"/>
+										
+									<b:inputText placeholder="Email"
+										value="#{mbAddAdherent.adherent.email}"  class="form-control"
+										id="exampleDropdownFormEmail10" required="false"
+										requiredMessage="Veuillez saisir votre mail"/>
+										
+									<b:inputText placeholder="Identifiant"
+										value="#{mbAddAdherent.adherent.login}"  class="form-control"
+										id="exampleDropdownFormEmail11" required="true"
+										requiredMessage="Veuillez choisir un identifiant"/>
+										
+									<b:inputSecret placeholder="Password"
+										value="#{mbAddAdherent.adherent.password}"  class="form-control"
+										id="exampleDropdownFormEmail12" required="true"
+										requiredMessage="Veuillez choisir un mot de passe"/>
+										
+								</b:column>
+							</b:row>
+<br/><br/>
+							<b:row>
+								<b:column>
+									<b:commandButton largeScreen="half" update="@form"
+										dismiss="modal" value="S'enregistrer" look="info"
+										action="#{mbAddAdherent.add()}" />
+									<b:button largeScreen="half" value="Annuler" 
+										dismiss="modal"  href="#navbar-brand"/>
+								</b:column>
+							</b:row>
+
+							<b:fetchBeanInfos />
+							<b:messages />
+						</b:form>
+					</b:modal>
+		
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- NOS ETABLISSEMENTS -->
+
+
+	<!-- titre -->
+
+
+		<div class="container-fluid padding">
+			<div class="row welcome text-center">
+				<div class="col-4"></div>
+				<div class="col-4">
+					<div class="row welcome text-center">
+						<div class="col-2"></div>
+						<div class="col-8" id="nosEtablissements">
+							<h2 class="display-4">Nos établissements</h2>
+						</div>
+						<div class="col-2"></div>
+					</div>
+				</div>
+				<div class="col-4"></div>
+			</div>
+		</div>
+		<br /> <br /> <br />
+
+		<!-- carte -->
+
+		<div class="container-fluid padding">
+			<div class="row padding">
+				<div class="services">
+					<div class="col-xl-12">
+						<figure class="snip1174 navy col-xl-6"> <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <figure class="snip1174 navy col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> -->
+						<img src="pics/website/paris2.jpg" alt="Paris" /> <figcaption>
+						<h2>Paris</h2>
+						<p>
+							Découvrez si votre établissement<br /> travaille avec nous...
+						</p>
+						<a href="#moteurRechercheEtablissementsParis" data-toggle="modal" id="jyVais1">J'y
+							vais!</a> </figcaption> </figure>
+
+						<b:modal styleClass="responsiveModalPseudoClass" closable="false"
+							closeOnEscape="true" size="modal-lg"
+							id="moteurRechercheEtablissementsParis">
+
+<h4 style="color: rgb(29,204,195); font-weight: bold; text-align:center;">Listes des établissements à Paris</h4>
+
+							<b:dataTable value="#{mbRechercheEtab.etablissementsParis}"
+								var="etab">
+
+								<b:dataTableColumn>
+									<f:facet name="header">Nom</f:facet>
+									<h:outputLabel value="#{etab.nom}" />
+								</b:dataTableColumn>
+								<b:dataTableColumn>
+									<f:facet name="header">Adresse</f:facet>
+									<h:outputLabel value="#{etab.adresse}" />
+								</b:dataTableColumn>
+								<b:dataTableColumn>
+									<f:facet name="header">Code Postal</f:facet>
+									<h:outputLabel value="#{etab.ville.codePostal}" />
+								</b:dataTableColumn>
+								<b:dataTableColumn>
+									<f:facet name="header">Ville</f:facet>
+									<h:outputLabel value="#{etab.ville.nom}" />
+								</b:dataTableColumn>
+
+								<b:dataTableColumn>
+									<f:facet name="header">Téléphone</f:facet>
+									<h:outputLabel value="#{etab.telephone}" />
+								</b:dataTableColumn>
+								<b:dataTableColumn>
+									<f:facet name="header">Email</f:facet>
+									<h:outputLabel value="#{etab.email}" />
+								</b:dataTableColumn>
+
+							</b:dataTable>
+
+							<f:facet name="footer">
+								<b:button value="Fermer" dismiss="modal" />
+								<b:button value="Ok" look="primary" dismiss="modal" />
+							</f:facet>
+						</b:modal>
+
+						<figure class="snip1174 red col-xl-6"> <img
+							src="pics/website/lyon2.jpg" alt="Lyon" /> <figcaption>
+						<h2>Lyon</h2>
+						<p>
+							Découvrez si votre établissement<br /> travaille avec nous...
+						</p>
+						<a href="#moteurRechercheEtablissementsLyon" data-toggle="modal" id="jyVais2">J'y
+							vais!</a> </figcaption> </figure>
+
+						<b:modal styleClass="responsiveModalPseudoClass" closable="false"
+							closeOnEscape="true" size="modal-lg"
+							id="moteurRechercheEtablissementsLyon">
+
+<h4 style="color: rgb(29,204,195); font-weight: bold; text-align:center;">Listes des établissements à Lyon</h4>
+							<b:dataTable value="#{mbRechercheEtab.etablissementsLyon}"
+								var="etab">
+
+								<b:dataTableColumn>
+									<f:facet name="header">Nom</f:facet>
+									<h:outputLabel value="#{etab.nom}" />
+								</b:dataTableColumn>
+								<b:dataTableColumn>
+									<f:facet name="header">Adresse</f:facet>
+									<h:outputLabel value="#{etab.adresse}" />
+								</b:dataTableColumn>
+								<b:dataTableColumn>
+									<f:facet name="header">Code Postal</f:facet>
+									<h:outputLabel value="#{etab.ville.codePostal}" />
+								</b:dataTableColumn>
+								<b:dataTableColumn>
+									<f:facet name="header">Ville</f:facet>
+									<h:outputLabel value="#{etab.ville.nom}" />
+								</b:dataTableColumn>
+
+								<b:dataTableColumn>
+									<f:facet name="header">Téléphone</f:facet>
+									<h:outputLabel value="#{etab.telephone}" />
+								</b:dataTableColumn>
+
+							</b:dataTable>
+
+							<f:facet name="footer">
+								<b:button value="Fermer" dismiss="modal" />
+								<b:button value="Ok" look="primary" dismiss="modal" />
+							</f:facet>
+						</b:modal>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<!-- FOOTER -->
+
+
+	<footer id="basDePage"> <section id="contact">
+	<div class="wrapper">
+		<h3>Abonnez-vous à notre newsletter!</h3>
+		<br />
+		<p>Tenez-vous informer de l'actualité de la Coopér'Active et des
+			derniers services proposés. Retrouvez nos vidéos et suivez-nous tout
+			simplement sur les réseaux sociaux</p>
+		<br />
+		<form>
+			<input type="text" id="name" placeholder="Votre nom" /> <input
+				type="text" id="email" placeholder="Votre e-mail" /> <input
+				type="submit" value="OK" id="button3" />
+		</form>
+	</div>
+	</section>
+
+	<div id="wrap" class="wrapper">
+		<h3>COOPER'ACTIVE</h3>
+		<p>Copyright @ 2018. Tous droits réservés</p>
+		<div class="basBasDePage">
+			<a href="#" id="lien1">Qui sommes-nous ?</a> <a href="#" id="lien2">Conditions
+				Générales d'Utilisation</a> <a href="#" id="lien3">Politique de
+				Protection des Données Personnelles</a>
+		</div>
+		<br /> <b>Réseaux sociaux</b><br /> <img
+			src="pics/website/facebook32.png" /> <img
+			src="pics/website/instagram32.png" /> <img
+			src="pics/website/youtube32.png" /> <img
+			src="pics/website/twitter32.png" />
+	</div>
+	</footer>
+
+
+
+
+</h:body>
+
+
+</html>
