@@ -1,0 +1,73 @@
+ @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css");
+
+body {
+	margin-top: 20px;
+}
+.ligneBadges
+{
+width: 90%;
+}
+
+.fa {
+	font-size: 50px;
+	text-align: right;
+	position: absolute;
+	top: 7px;
+	right: 27px;
+	outline: none;
+}
+
+a {
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+/* etablissement */
+a.etablissement i, .etablissement h4.list-group-item-heading {
+	color: #E48A07 !important;
+}
+
+a.etablissement:hover {
+	background-color: #E48A07;
+}
+
+a.etablissement:hover * {
+	color: #FFF;
+}
+/* Facebook */
+a.enfants i, .enfants h4.list-group-item-heading {
+	color: #3b5998;
+}
+
+a.enfants:hover {
+	background-color: #3b5998;
+}
+
+a.enfants:hover * {
+	color: #FFF;
+}
+/* Google */
+a.commandesEnregistrees i, .commandesEnregistrees h4.list-group-item-heading {
+	color: #dd4b39;
+}
+
+a.commandesEnregistrees:hover {
+	background-color: #dd4b39;
+}
+
+a.commandesEnregistrees:hover * {
+	color: #FFF;
+}
+/* commandesValidees */
+a.commandesValidees i, .commandesValidees h4.list-group-item-heading {
+	color: #00acee;
+}
+
+a.commandesValidees:hover {
+	background-color: #00acee;
+}
+
+a.commandesValidees:hover * {
+	color: #FFF;
+}
