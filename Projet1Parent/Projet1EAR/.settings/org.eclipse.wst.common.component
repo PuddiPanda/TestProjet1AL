@@ -17,7 +17,7 @@
         <dependent-module archiveName="Projet1InterfaceDao-1.0.jar" deploy-path="/lib" handle="module:/resource/Projet1InterfaceDao/Projet1InterfaceDao">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Projet1Entity-1.0.jar" deploy-path="/lib" handle="module:/resource/Projet1Entity/Projet1Entity">
+        <dependent-module archiveName="Projet1Entity-1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/fr/afcepf/al33/projet1/Projet1Entity/1.0/Projet1Entity-1.0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
